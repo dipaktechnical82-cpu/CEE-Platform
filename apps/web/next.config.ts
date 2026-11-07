@@ -3,6 +3,7 @@ import { PHASE_DEVELOPMENT_SERVER } from 'next/constants';
 
 const nextConfig = (phase: string): NextConfig => ({
   distDir: phase === PHASE_DEVELOPMENT_SERVER ? '.next-dev' : '.next',
+  transpilePackages: ['@cee/contracts'],
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
