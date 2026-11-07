@@ -40,7 +40,7 @@ export function PremiumConversionSection() {
             </Link>
 
             <Link
-              href="/#intelligence-hub"
+              href="/features"
               className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-6 py-4 text-sm font-semibold text-white shadow-sm backdrop-blur-md transition-colors hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8DFF4]"
             >
               <Sparkles size={16} className="text-[#A9E6DD]" />

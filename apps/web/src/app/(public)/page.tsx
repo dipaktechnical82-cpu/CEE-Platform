@@ -65,7 +65,7 @@ export default function HomePage() {
                 <ArrowRight size={18} />
               </Link>
               <Link
-                href="/#journey-begins"
+                href="/about"
                 className="inline-flex items-center rounded-full border border-white/50 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(0,0,0,0.12)] backdrop-blur-md transition-colors hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7ad5c7]"
               >
                 Explore Platform

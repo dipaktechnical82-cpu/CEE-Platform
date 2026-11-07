@@ -7,18 +7,19 @@ const navigationGroups = [
     title: 'Platform',
     links: [
       { label: 'Home', href: '/' },
-      { label: 'Features', href: '/#intelligence-hub' },
+      { label: 'Features', href: '/features' },
+      { label: 'Question Bank', href: '/question-bank' },
+      { label: 'Mock Examinations', href: '/mock-tests' },
       { label: 'Student Dashboard', href: '/dashboard' },
-      { label: 'Mock Examinations', href: '/#exam-arena' },
     ],
   },
   {
     title: 'Learning',
     links: [
       { label: 'Study Materials', href: '/syllabus' },
-      { label: 'Practice Tests', href: '/#exam-arena' },
-      { label: 'AI Learning Assistant', href: '/#intelligence-hub' },
-      { label: 'Performance Analytics', href: '/#progress-observatory' },
+      { label: 'Practice Tests', href: '/question-bank' },
+      { label: 'AI Learning Assistant', href: '/features' },
+      { label: 'About Platform', href: '/about' },
     ],
   },
   {

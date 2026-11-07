@@ -11,6 +11,7 @@
   min-height: clamp(46rem, 88svh, 58rem);
   flex-direction: column;
   overflow: hidden;
+  scroll-margin-top: 6.5rem;
   padding: clamp(4.5rem, 7.5vw, 7.25rem) clamp(1.25rem, 4vw, 3.5rem) 1.5rem;
   color: var(--journey-ink);
   background: var(--journey-cloud);

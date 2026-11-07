@@ -147,8 +147,8 @@ export function StudyModesSection() {
             <strong className="font-semibold text-[#244A50] dark:text-[#F5FBFA]">Engineering Status:</strong>{' '}
             Practice Mode and Topic Filtering are active in the interactive preview above. Full Timed
             Exam simulation is featured in the{' '}
-            <Link href="/#exam-arena" className="font-semibold underline hover:text-[#167A80]">
-              Exam Arena
+            <Link href="/mock-tests" className="font-semibold underline hover:text-[#167A80]">
+              Mock Test Arena
             </Link>
             . Adaptive Practice and Mistake DNA are undergoing active backend model development.
           </p>

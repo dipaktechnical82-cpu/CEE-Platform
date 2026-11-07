@@ -168,7 +168,7 @@ test('primary navigation and preparation links point to existing destinations', 
     ['Features', ['/features', '/#intelligence-hub']],
     ['Mock Tests', ['/mock-tests', '/#exam-arena']],
     ['Start Preparing', ['/register']],
-    ['Explore Platform', ['/syllabus', '/#journey-begins', '/#intelligence-hub']],
+    ['Explore Platform', ['/about', '/syllabus', '/#journey-begins', '/#intelligence-hub']],
   ];
 
   for (const [label, validHrefs] of requiredLinks) {
