@@ -27,7 +27,7 @@ env.bak/
 venv.bak/
 
 # Django media & static collections (generated in dev/prod)
-media/
+apps/api/media/
 staticfiles/
 static_root/
 *.sqlite3
