@@ -1,0 +1,22 @@
+{
+  "name": "nepal-cee-platform",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.22.0",
+  "description": "Production-grade AI-powered Nepal Medical CEE Entrance Preparation Platform",
+  "scripts": {
+    "dev:web": "pnpm --filter @cee/web dev",
+    "build:web": "pnpm --filter @cee/web build",
+    "lint:web": "pnpm --filter @cee/web lint",
+    "typecheck:web": "pnpm --filter @cee/web typecheck",
+    "typecheck:contracts": "pnpm --filter @cee/contracts typecheck",
+    "typecheck": "pnpm -r --parallel typecheck",
+    "lint": "pnpm -r --parallel lint",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,json,md,yml,yaml}\"",
+    "format:write": "prettier --write \"**/*.{ts,tsx,js,json,md,yml,yaml}\"",
+    "verify:all": "powershell -ExecutionPolicy Bypass -File ./scripts/verify.ps1"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2"
+  }
+}

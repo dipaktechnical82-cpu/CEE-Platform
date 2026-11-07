@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="background" x1="120" y1="0" x2="1090" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#173E44"/>
+      <stop offset=".58" stop-color="#244A50"/>
+      <stop offset="1" stop-color="#102B32"/>
+    </linearGradient>
+    <radialGradient id="ambient" cx="0" cy="0" r="1" gradientTransform="matrix(305 0 0 245 965 312)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#68CFC4" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#68CFC4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="logoCore" cx="0" cy="0" r="1" gradientTransform="matrix(0 56 -56 0 126 116)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D7FFF7"/>
+      <stop offset=".5" stop-color="#70D4C8"/>
+      <stop offset="1" stop-color="#061C23"/>
+    </radialGradient>
+    <linearGradient id="heartGlass" x1="35" y1="35" x2="139" y2="137" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8FFF4" stop-opacity=".9"/>
+      <stop offset=".48" stop-color="#73D9D4" stop-opacity=".52"/>
+      <stop offset="1" stop-color="#73B9E8" stop-opacity=".65"/>
+    </linearGradient>
+    <linearGradient id="heartVessel" x1="74" y1="8" x2="105" y2="79" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8FFF9" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#69C9D5" stop-opacity=".66"/>
+    </linearGradient>
+    <radialGradient id="heartLight" cx="0" cy="0" r="1" gradientTransform="matrix(58 72 -54 43 66 45)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF" stop-opacity=".65"/>
+      <stop offset="1" stop-color="#C1FFF2" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="heartGlow" x="-.35" y="-.25" width="1.7" height="1.7" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" stroke="#D5F3E8" stroke-opacity=".055"/>
+    </pattern>
+  </defs>
+
+  <path fill="url(#background)" d="M0 0h1200v630H0z"/>
+  <path fill="url(#ambient)" d="M0 0h1200v630H0z"/>
+  <path fill="url(#grid)" d="M0 0h1200v630H0z"/>
+  <path d="M0 548c255-57 410-42 626 82H0z" fill="#102B32" fill-opacity=".32"/>
+
+  <g opacity=".36" stroke="#B8DFF4">
+    <circle cx="1018" cy="307" r="207" stroke-opacity=".3"/>
+    <circle cx="1018" cy="307" r="172" stroke-dasharray="2 12" stroke-opacity=".5"/>
+    <circle cx="1018" cy="307" r="130" stroke-opacity=".22"/>
+    <path d="M838 183h55m250 0h38M823 431h68m250 0h41" stroke-linecap="round" stroke-opacity=".46"/>
+  </g>
+  <g fill="#A9E6DD">
+    <circle cx="842" cy="183" r="3"/>
+    <circle cx="1181" cy="183" r="3" fill="#B8DFF4"/>
+    <circle cx="834" cy="431" r="3" fill="#B8DFF4"/>
+    <circle cx="1176" cy="431" r="3"/>
+  </g>
+
+  <g transform="translate(930 216) scale(1.02)" filter="url(#heartGlow)" opacity=".55">
+    <path d="M88 147c-5 0-10-4-16-11C54 116 37 96 34 76c-3-18 6-31 20-34 12-3 23 3 32 14 8-12 19-19 31-17 16 2 25 16 22 34-3 20-20 42-39 63-5 6-9 11-12 11Z" fill="#A9E6DD"/>
+  </g>
+  <g transform="translate(930 216) scale(1.02)">
+    <g stroke="url(#heartVessel)" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
+      <path d="M75 51 73 28c-1-12 5-20 13-20 7 0 11 7 11 16v22"/>
+      <path d="m96 48 8-24c3-10 10-14 16-11 7 3 8 11 4 20l-12 24"/>
+      <path d="m66 54-17-11c-9-6-18-4-21 2-4 7 0 13 9 19l21 14"/>
+      <path d="m111 53 12-10c8-6 16-5 20 1 4 6 1 13-7 19l-15 12"/>
+    </g>
+    <path d="M88 147c-5 0-10-4-16-11C54 116 37 96 34 76c-3-18 6-31 20-34 12-3 23 3 32 14 8-12 19-19 31-17 16 2 25 16 22 34-3 20-20 42-39 63-5 6-9 11-12 11Z" fill="url(#heartGlass)" stroke="#BAFFF0" stroke-opacity=".92" stroke-width="2"/>
+    <path d="M88 147c-5 0-10-4-16-11C54 116 37 96 34 76c-3-18 6-31 20-34 12-3 23 3 32 14 8-12 19-19 31-17 16 2 25 16 22 34-3 20-20 42-39 63-5 6-9 11-12 11Z" fill="url(#heartLight)"/>
+    <path d="M85 56c-7 9-11 20-10 33 1 15 8 33 17 48m-37-91c-9 7-11 20-6 33m68-36c10 6 14 16 11 28" stroke="#E1FFF8" stroke-linecap="round" stroke-opacity=".7" stroke-width="1.5"/>
+    <g stroke="#40B8C5" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".72" stroke-width="1.5">
+      <path d="m54 83 11 0 6-8 7 17 7-25 8 35 7-15 12 0"/>
+      <path d="m54 95 8 0 5 7m47-18 7-6m-36 40v8l7 5m17-35h9l5-6"/>
+    </g>
+    <g fill="#C8FFF4" stroke="#52C6CF" stroke-width="1">
+      <circle cx="54" cy="83" r="2"/><circle cx="112" cy="83" r="2"/>
+      <circle cx="67" cy="102" r="2"/><circle cx="100" cy="106" r="2"/>
+      <circle cx="89" cy="147" r="2"/>
+    </g>
+  </g>
+  <path d="M807 378h36l9-10 9 20 11-34 11 24h34" stroke="#A9E6DD" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".58" stroke-width="1.5"/>
+  <path d="M1115 378h21l8-8 8 17 10-29 10 20h28" stroke="#B8DFF4" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".58" stroke-width="1.5"/>
+
+  <g>
+    <circle cx="126" cy="116" r="31" fill="#041A20" stroke="#77D9CA" stroke-width="1.5"/>
+    <circle cx="126" cy="116" r="26" fill="url(#logoCore)" stroke="#D0FFF4" stroke-opacity=".72"/>
+    <circle cx="126" cy="116" r="20" stroke="#D9FFF8" stroke-opacity=".5"/>
+    <circle cx="126" cy="116" r="16" stroke="#D9FFF8" stroke-opacity=".32"/>
+    <path d="M113 105a16 16 0 0 1 18-5" stroke="#FFF" stroke-linecap="round" stroke-opacity=".82"/>
+    <circle cx="126" cy="116" r="2" fill="#EAFFFB"/>
+    <path d="M112 116c0 8 6 14 14 14s14-6 14-14" stroke="#D9FFF8" stroke-linecap="round" stroke-opacity=".42"/>
+    <text x="126" y="119" fill="#F1FFFB" font-family="Arial,sans-serif" font-size="10" font-weight="800" letter-spacing=".4" text-anchor="middle">CEE</text>
+  </g>
+  <text x="174" y="112" fill="#F5FBFA" font-family="Arial,sans-serif" font-size="21" font-weight="700" letter-spacing="2.3">CEE MEDICAL PREP</text>
+  <text x="174" y="136" fill="#B8DFF4" font-family="Arial,sans-serif" font-size="10" font-weight="600" letter-spacing="2.6">NEPAL MEDICAL ENTRANCE PREPARATION</text>
+
+  <path d="M94 185h37" stroke="#A9E6DD" stroke-linecap="round" stroke-width="2"/>
+  <text x="145" y="189" fill="#A9E6DD" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2.7">LEARN WITH CLARITY. PRACTICE WITH PURPOSE.</text>
+
+  <text x="92" y="275" fill="#F5FBFA" font-family="Arial,sans-serif" font-size="48" font-weight="700" letter-spacing="-1.7">Your Journey to</text>
+  <text x="92" y="335" fill="#F5FBFA" font-family="Arial,sans-serif" font-size="48" font-weight="700" letter-spacing="-1.7">Medical School</text>
+  <text x="92" y="395" fill="#B8DFF4" font-family="Arial,sans-serif" font-size="48" font-weight="700" letter-spacing="-1.7">Starts Here.</text>
+
+  <text x="95" y="444" fill="#D5F3E8" font-family="Arial,sans-serif" font-size="15" font-weight="400" letter-spacing=".25">Structured learning, focused practice,</text>
+  <text x="95" y="468" fill="#D5F3E8" font-family="Arial,sans-serif" font-size="15" font-weight="400" letter-spacing=".25">and intelligent learning assistance.</text>
+
+  <path d="M95 520h511" stroke="#D5F3E8" stroke-opacity=".2"/>
+  <text x="95" y="552" fill="#A9E6DD" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2">LEARN</text>
+  <circle cx="155" cy="548" r="2" fill="#B8DFF4"/>
+  <text x="169" y="552" fill="#A9E6DD" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2">PRACTICE</text>
+  <circle cx="253" cy="548" r="2" fill="#B8DFF4"/>
+  <text x="267" y="552" fill="#A9E6DD" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2">IMPROVE</text>
+  <circle cx="352" cy="548" r="2" fill="#B8DFF4"/>
+  <text x="366" y="552" fill="#A9E6DD" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2">ACHIEVE</text>
+</svg>

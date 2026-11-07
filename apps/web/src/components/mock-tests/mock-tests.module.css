@@ -1,0 +1,611 @@
+/* =============================================================================
+   CEE MEDICAL PREP — MOCK TEST COMMAND CENTER & CBT INTERFACE
+   Official Brand Palette:
+   - Sky Blue: #B8DFF4
+   - Aqua Mint: #A9E6DD
+   - Pale Mint: #D5F3E8
+   - Cloud White: #F5FBFA
+   - Deep Teal: #244A50
+   ============================================================================= */
+
+.commandCenter {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Mode Variables */
+.commandCenter.light {
+  --bg-primary: #f5fbfa;
+  --bg-surface: #ffffff;
+  --bg-surface-subtle: #eaf8f4;
+  --bg-surface-elevated: #ffffff;
+  --border-subtle: rgba(169, 230, 221, 0.45);
+  --border-strong: #d5f3e8;
+  --text-primary: #244a50;
+  --text-secondary: #3d6870;
+  --text-muted: #5e848c;
+  --accent-sky: #b8dff4;
+  --accent-aqua: #0da994;
+  --accent-mint: #d5f3e8;
+  --accent-violet: #5b52d6;
+  --card-shadow: 0 4px 20px rgba(36, 74, 80, 0.06);
+  --card-shadow-hover: 0 12px 30px rgba(36, 74, 80, 0.12);
+  --badge-bg: rgba(169, 230, 221, 0.25);
+  --badge-text: #1d5f66;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Dark Mode Variables */
+.commandCenter.dark {
+  --bg-primary: #07111e;
+  --bg-surface: #0e192d;
+  --bg-surface-subtle: #13223f;
+  --bg-surface-elevated: #182849;
+  --border-subtle: rgba(184, 223, 244, 0.14);
+  --border-strong: rgba(169, 230, 221, 0.25);
+  --text-primary: #f5fbfa;
+  --text-secondary: #a9b8d0;
+  --text-muted: #7e8daa;
+  --accent-sky: #b8dff4;
+  --accent-aqua: #a9e6dd;
+  --accent-mint: #d5f3e8;
+  --accent-violet: #7367f0;
+  --card-shadow: 0 12px 32px rgba(5, 10, 24, 0.6);
+  --card-shadow-hover: 0 16px 40px rgba(5, 10, 24, 0.85);
+  --badge-bg: rgba(169, 230, 221, 0.12);
+  --badge-text: #a9e6dd;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* -----------------------------------------------------------------------------
+   Hero Diagnostic Console
+   ----------------------------------------------------------------------------- */
+.heroSection {
+  position: relative;
+  overflow: hidden;
+  padding: 4.5rem 1rem 3.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+@media (min-width: 640px) {
+  .heroSection {
+    padding: 5.5rem 1.5rem 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroSection {
+    padding: 6.5rem 2rem 5.5rem;
+  }
+}
+
+.heroGlowOrb {
+  position: absolute;
+  top: -150px;
+  right: -100px;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(90px);
+  opacity: 0.22;
+  background: radial-gradient(circle, var(--accent-aqua), var(--accent-sky), transparent);
+}
+
+.heroGlowOrbSecondary {
+  position: absolute;
+  bottom: -150px;
+  left: -100px;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(100px);
+  opacity: 0.18;
+  background: radial-gradient(circle, var(--accent-violet), var(--accent-sky), transparent);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  border: 1px solid var(--border-subtle);
+}
+
+.heroHeading {
+  margin-top: 1.25rem;
+  font-size: 2.25rem;
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+}
+
+@media (min-width: 640px) {
+  .heroHeading {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroHeading {
+    font-size: 3.75rem;
+  }
+}
+
+.heroGradientText {
+  background: linear-gradient(135deg, #b8dff4 0%, #a9e6dd 50%, #d5f3e8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.commandCenter.light .heroGradientText {
+  background: linear-gradient(135deg, #1d6e7a 0%, #244a50 50%, #0da994 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroDescription {
+  margin-top: 1.25rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 38rem;
+}
+
+/* Hero Diagnostic Card */
+.diagnosticDeck {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.diagnosticHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.75rem;
+}
+
+/* -----------------------------------------------------------------------------
+   Snapshot KPI Cards
+   ----------------------------------------------------------------------------- */
+.snapshotGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .snapshotGrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.snapshotCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.snapshotCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-aqua);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* -----------------------------------------------------------------------------
+   Filter & Search Panel
+   ----------------------------------------------------------------------------- */
+.filterPanel {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  margin-top: 2rem;
+}
+
+.filterChipsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.filterChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-surface-subtle);
+  color: var(--text-secondary);
+  transition: all 0.15s ease;
+}
+
+.filterChip:hover {
+  border-color: var(--accent-aqua);
+  color: var(--text-primary);
+}
+
+.filterChip.active {
+  background: var(--accent-aqua);
+  color: #07171d;
+  border-color: var(--accent-aqua);
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(169, 230, 221, 0.3);
+}
+
+.commandCenter.light .filterChip.active {
+  background: #244a50;
+  color: #ffffff;
+  border-color: #244a50;
+}
+
+/* -----------------------------------------------------------------------------
+   Mock Exam Cards Grid
+   ----------------------------------------------------------------------------- */
+.examGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+@media (min-width: 640px) {
+  .examGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .examGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.examCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.examCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-aqua);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* -----------------------------------------------------------------------------
+   Active Computer-Based Test (CBT) Interface
+   ----------------------------------------------------------------------------- */
+.cbtScreen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+}
+
+.cbtTopBar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-strong);
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.timerBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
+  color: var(--accent-aqua);
+}
+
+.timerWarning {
+  color: #f59e0b !important;
+  border-color: rgba(245, 158, 11, 0.4) !important;
+  background: rgba(245, 158, 11, 0.1) !important;
+}
+
+.timerCritical {
+  color: #ef4444 !important;
+  border-color: rgba(239, 68, 68, 0.5) !important;
+  background: rgba(239, 68, 68, 0.15) !important;
+  animation: pulseCritical 1.2s infinite;
+}
+
+@keyframes pulseCritical {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.cbtBody {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  .cbtBody {
+    grid-template-columns: 1fr 340px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .cbtBody {
+    grid-template-columns: 1fr 380px;
+  }
+}
+
+.questionPanel {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+@media (min-width: 768px) {
+  .questionPanel {
+    padding: 2.25rem;
+  }
+}
+
+.optionCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 1rem 1.15rem;
+  border-radius: 0.85rem;
+  border: 1.5px solid var(--border-subtle);
+  background: var(--bg-surface);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.optionCard:hover {
+  border-color: var(--accent-aqua);
+  background: var(--bg-surface-subtle);
+}
+
+.optionCard.selected {
+  border-color: var(--accent-aqua);
+  background: rgba(169, 230, 221, 0.12);
+  box-shadow: 0 0 16px rgba(169, 230, 221, 0.15);
+}
+
+.commandCenter.light .optionCard.selected {
+  background: #eaf8f4;
+  border-color: #244a50;
+  box-shadow: 0 0 12px rgba(36, 74, 80, 0.1);
+}
+
+.optionKey {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  border: 1.5px solid var(--border-subtle);
+  background: var(--bg-surface-subtle);
+  color: var(--text-primary);
+}
+
+.optionCard.selected .optionKey {
+  background: var(--accent-aqua);
+  color: #041017;
+  border-color: var(--accent-aqua);
+}
+
+.commandCenter.light .optionCard.selected .optionKey {
+  background: #244a50;
+  color: #ffffff;
+  border-color: #244a50;
+}
+
+/* Palette on Right */
+.paletteSidebar {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-strong);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .paletteSidebar {
+    border-top: none;
+    border-left: 1px solid var(--border-strong);
+    height: calc(100vh - 65px);
+    overflow-y: auto;
+  }
+}
+
+.paletteGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.paletteBtn {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform 0.1s ease;
+  position: relative;
+}
+
+.paletteBtn:hover {
+  transform: scale(1.05);
+}
+
+.paletteCurrent {
+  outline: 2.5px solid #38bdf8;
+  outline-offset: 2px;
+}
+
+/* 5 Official States */
+.stateNotVisited {
+  background: #334155;
+  color: #94a3b8;
+}
+
+.commandCenter.light .stateNotVisited {
+  background: #e2e8f0;
+  color: #64748b;
+}
+
+.stateNotAnswered {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.stateAnswered {
+  background: #059669;
+  color: #ffffff;
+}
+
+.stateMarked {
+  background: #7c3aed;
+  color: #ffffff;
+}
+
+.stateAnsweredAndMarked {
+  background: #7c3aed;
+  color: #ffffff;
+}
+
+.stateAnsweredAndMarked::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  border: 1px solid #ffffff;
+}
+
+/* -----------------------------------------------------------------------------
+   Modal Dialogs & Confirmation
+   ----------------------------------------------------------------------------- */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(2, 6, 17, 0.82);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modalContent {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 1.5rem;
+  max-width: 540px;
+  width: 100%;
+  padding: 2rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* -----------------------------------------------------------------------------
+   Result Dashboard & Mistake DNA
+   ----------------------------------------------------------------------------- */
+.resultHeader {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: var(--card-shadow);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.scoreRingValue {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: var(--accent-aqua);
+}
+
+.mistakeCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  transition: border-color 0.2s ease;
+}
+
+.mistakeCard:hover {
+  border-color: var(--accent-aqua);
+}

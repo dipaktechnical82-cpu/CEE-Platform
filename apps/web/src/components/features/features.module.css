@@ -1,0 +1,598 @@
+/* ==========================================================================
+   CEE MEDICAL PREP — FEATURES PAGE STYLES
+   Official Brand Palette:
+   Sky Blue:   #B8DFF4
+   Aqua Mint:  #A9E6DD
+   Pale Mint:  #D5F3E8
+   Cloud White:#F5FBFA
+   Deep Teal:  #244A50
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Container & Section Wrappers
+   -------------------------------------------------------------------------- */
+.pageRoot {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #060a18;
+  color: #f5fbfa;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:global(.light) .pageRoot,
+.pageRootLight {
+  background-color: #f5fbfa;
+  color: #244a50;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  padding: 5rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding: 6rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 7.5rem 2rem;
+  }
+}
+
+.sectionInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* --------------------------------------------------------------------------
+   Section Headers & Eyebrows
+   -------------------------------------------------------------------------- */
+.eyebrowBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.875rem;
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 1px solid rgba(169, 230, 221, 0.35);
+  background: rgba(169, 230, 221, 0.08);
+  color: #a9e6dd;
+  backdrop-filter: blur(8px);
+}
+
+:global(.light) .eyebrowBadge,
+.pageRootLight .eyebrowBadge {
+  border-color: rgba(36, 74, 80, 0.25);
+  background: rgba(213, 243, 232, 0.6);
+  color: #244a50;
+}
+
+.sectionHeading {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+  margin-top: 1rem;
+}
+
+:global(.light) .sectionHeading,
+.pageRootLight .sectionHeading {
+  color: #244a50;
+}
+
+@media (min-width: 640px) {
+  .sectionHeading {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sectionHeading {
+    font-size: 3rem;
+  }
+}
+
+.sectionLead {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: #a9b8d0;
+  max-width: 44rem;
+  margin-top: 1rem;
+}
+
+:global(.light) .sectionLead,
+.pageRootLight .sectionLead {
+  color: #3d6870;
+}
+
+@media (min-width: 640px) {
+  .sectionLead {
+    font-size: 1.1875rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Sub-Navigation Deck (Sticky Floating Glass)
+   -------------------------------------------------------------------------- */
+.subnavPill {
+  position: sticky;
+  top: 4.75rem;
+  z-index: 40;
+  margin: 0 auto 2rem;
+  padding: 0.5rem 0.75rem;
+  max-width: 1080px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: rgba(10, 17, 40, 0.85);
+  border: 1px solid rgba(184, 223, 244, 0.16);
+  border-radius: 9999px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: all 0.25s ease;
+}
+
+:global(.light) .subnavPill,
+.pageRootLight .subnavPill {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(36, 74, 80, 0.15);
+  box-shadow: 0 8px 24px rgba(36, 74, 80, 0.08);
+}
+
+.subnavLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0.25rem;
+}
+
+.subnavLinks::-webkit-scrollbar {
+  display: none;
+}
+
+.subnavLink {
+  white-space: nowrap;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  color: #a9b8d0;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.subnavLink:hover,
+.subnavLink:focus-visible {
+  color: #ffffff;
+  background: rgba(184, 223, 244, 0.12);
+}
+
+:global(.light) .subnavLink,
+.pageRootLight .subnavLink {
+  color: #3d6870;
+}
+
+:global(.light) .subnavLink:hover,
+:global(.light) .subnavLink:focus-visible,
+.pageRootLight .subnavLink:hover,
+.pageRootLight .subnavLink:focus-visible {
+  color: #244a50;
+  background: #d5f3e8;
+}
+
+.subnavLinkActive {
+  background: linear-gradient(135deg, rgba(30, 197, 178, 0.25), rgba(10, 146, 168, 0.25));
+  border: 1px solid rgba(169, 230, 221, 0.4);
+  color: #a9e6dd !important;
+}
+
+:global(.light) .subnavLinkActive,
+.pageRootLight .subnavLinkActive {
+  background: #a9e6dd;
+  border-color: #244a50;
+  color: #244a50 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Hero Visual Components (Hologram, Cardiac Pulse, Nodes)
+   -------------------------------------------------------------------------- */
+.heroGlowBackdrop {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75vw;
+  max-width: 900px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(169, 230, 221, 0.14) 0%, rgba(184, 223, 244, 0.08) 40%, rgba(10, 17, 40, 0) 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+:global(.light) .heroGlowBackdrop,
+.pageRootLight .heroGlowBackdrop {
+  background: radial-gradient(circle, rgba(169, 230, 221, 0.3) 0%, rgba(213, 243, 232, 0.25) 45%, rgba(245, 251, 250, 0) 70%);
+}
+
+.heroVisualStage {
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .heroVisualStage {
+    min-height: 560px;
+  }
+}
+
+.hologramChassis {
+  position: relative;
+  width: 320px;
+  height: 380px;
+  border-radius: 2rem;
+  padding: 1.25rem;
+  background: linear-gradient(145deg, rgba(16, 26, 60, 0.85) 0%, rgba(10, 17, 40, 0.95) 100%);
+  border: 1px solid rgba(169, 230, 221, 0.3);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), inset 0 0 40px rgba(169, 230, 221, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+:global(.light) .hologramChassis,
+.pageRootLight .hologramChassis {
+  background: linear-gradient(145deg, #ffffff 0%, #f5fbfa 100%);
+  border-color: rgba(36, 74, 80, 0.18);
+  box-shadow: 0 20px 50px rgba(36, 74, 80, 0.12), inset 0 0 30px rgba(213, 243, 232, 0.3);
+}
+
+@media (min-width: 640px) {
+  .hologramChassis {
+    width: 380px;
+    height: 440px;
+  }
+}
+
+.heartImageContainer {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 35px rgba(169, 230, 221, 0.25);
+  border: 2px solid rgba(184, 223, 244, 0.4);
+}
+
+@media (min-width: 640px) {
+  .heartImageContainer {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+.floatingCard1,
+.floatingCard2,
+.floatingCard3 {
+  position: absolute;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  background: rgba(16, 26, 60, 0.9);
+  border: 1px solid rgba(184, 223, 244, 0.25);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+  z-index: 20;
+  max-width: 240px;
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+:global(.light) .floatingCard1,
+:global(.light) .floatingCard2,
+:global(.light) .floatingCard3,
+.pageRootLight .floatingCard1,
+.pageRootLight .floatingCard2,
+.pageRootLight .floatingCard3 {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(36, 74, 80, 0.15);
+  box-shadow: 0 12px 28px rgba(36, 74, 80, 0.1);
+}
+
+.floatingCard1 {
+  top: 10%;
+  left: -2rem;
+  animation-delay: 0s;
+}
+
+.floatingCard2 {
+  bottom: 12%;
+  right: -2rem;
+  animation-delay: 2s;
+}
+
+.floatingCard3 {
+  top: 18%;
+  right: -1.5rem;
+  animation-delay: 4s;
+}
+
+@media (max-width: 640px) {
+  .floatingCard1,
+  .floatingCard2,
+  .floatingCard3 {
+    position: static;
+    max-width: 100%;
+    margin-top: 0.75rem;
+    animation: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Ecosystem Interactive Orbital Diagram
+   -------------------------------------------------------------------------- */
+.ecosystemStage {
+  position: relative;
+  width: 100%;
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+@media (min-width: 1024px) {
+  .ecosystemStage {
+    min-height: 680px;
+  }
+}
+
+.orbitalRing1 {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 1px dashed rgba(169, 230, 221, 0.3);
+  animation: orbitalRotate 90s linear infinite;
+  pointer-events: none;
+}
+
+.orbitalRing2 {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  border: 1px dashed rgba(184, 223, 244, 0.2);
+  animation: orbitalRotate 140s linear infinite reverse;
+  pointer-events: none;
+}
+
+:global(.light) .orbitalRing1,
+.pageRootLight .orbitalRing1 {
+  border-color: rgba(36, 74, 80, 0.2);
+}
+
+:global(.light) .orbitalRing2,
+.pageRootLight .orbitalRing2 {
+  border-color: rgba(36, 74, 80, 0.12);
+}
+
+.mentorCore {
+  position: relative;
+  z-index: 25;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #244a50 0%, #0d1e2b 75%, #060a18 100%);
+  border: 2px solid #a9e6dd;
+  box-shadow: 0 0 45px rgba(169, 230, 221, 0.45), inset 0 0 25px rgba(184, 223, 244, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: pulseGlow 4s ease-in-out infinite alternate;
+}
+
+:global(.light) .mentorCore,
+.pageRootLight .mentorCore {
+  background: radial-gradient(circle, #d5f3e8 0%, #a9e6dd 70%, #b8dff4 100%);
+  border-color: #244a50;
+  box-shadow: 0 0 35px rgba(36, 74, 80, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.5);
+  color: #244a50;
+}
+
+.mentorCore:hover,
+.mentorCore:focus-visible {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(169, 230, 221, 0.7);
+}
+
+.ecosystemNode {
+  position: absolute;
+  z-index: 22;
+  padding: 0.75rem 1.15rem;
+  border-radius: 9999px;
+  background: rgba(16, 26, 60, 0.92);
+  border: 1px solid rgba(184, 223, 244, 0.25);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+:global(.light) .ecosystemNode,
+.pageRootLight .ecosystemNode {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(36, 74, 80, 0.18);
+  box-shadow: 0 8px 20px rgba(36, 74, 80, 0.08);
+  color: #244a50;
+}
+
+.ecosystemNode:hover,
+.ecosystemNode:focus-visible {
+  transform: scale(1.08);
+  border-color: #a9e6dd;
+  box-shadow: 0 0 25px rgba(169, 230, 221, 0.4);
+}
+
+.ecosystemNodeActive {
+  border-color: #a9e6dd !important;
+  background: linear-gradient(135deg, rgba(36, 74, 80, 0.95), rgba(16, 26, 60, 0.98)) !important;
+  box-shadow: 0 0 30px rgba(169, 230, 221, 0.5) !important;
+}
+
+:global(.light) .ecosystemNodeActive,
+.pageRootLight .ecosystemNodeActive {
+  background: #d5f3e8 !important;
+  border-color: #244a50 !important;
+  box-shadow: 0 0 20px rgba(36, 74, 80, 0.15) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Feature Cards & Editorial Showcases
+   -------------------------------------------------------------------------- */
+.editorialCard {
+  position: relative;
+  border-radius: 1.5rem;
+  background: linear-gradient(145deg, rgba(16, 26, 60, 0.7) 0%, rgba(10, 17, 40, 0.85) 100%);
+  border: 1px solid rgba(184, 223, 244, 0.12);
+  padding: 1.75rem;
+  backdrop-filter: blur(14px);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+:global(.light) .editorialCard,
+.pageRootLight .editorialCard {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fdfb 100%);
+  border-color: rgba(36, 74, 80, 0.1);
+  box-shadow: 0 10px 30px rgba(36, 74, 80, 0.05);
+}
+
+.editorialCard:hover {
+  border-color: rgba(169, 230, 221, 0.35);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+:global(.light) .editorialCard:hover,
+.pageRootLight .editorialCard:hover {
+  border-color: #a9e6dd;
+  box-shadow: 0 14px 35px rgba(36, 74, 80, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   OMR Exam Simulation Bubbles
+   -------------------------------------------------------------------------- */
+.omrBubble {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(184, 223, 244, 0.4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #a9b8d0;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+:global(.light) .omrBubble,
+.pageRootLight .omrBubble {
+  border-color: rgba(36, 74, 80, 0.3);
+  color: #3d6870;
+}
+
+.omrBubble:hover {
+  border-color: #a9e6dd;
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+.omrBubbleSelected {
+  background-color: #244a50;
+  border-color: #a9e6dd;
+  color: #a9e6dd;
+  box-shadow: 0 0 10px rgba(169, 230, 221, 0.5);
+}
+
+:global(.light) .omrBubbleSelected,
+.pageRootLight .omrBubbleSelected {
+  background-color: #244a50;
+  border-color: #244a50;
+  color: #f5fbfa;
+}
+
+/* --------------------------------------------------------------------------
+   Animations
+   -------------------------------------------------------------------------- */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 35px rgba(169, 230, 221, 0.35);
+  }
+  100% {
+    box-shadow: 0 0 65px rgba(169, 230, 221, 0.65);
+  }
+}
+
+@keyframes orbitalRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbitalRing1,
+  .orbitalRing2,
+  .mentorCore,
+  .floatingCard1,
+  .floatingCard2,
+  .floatingCard3 {
+    animation: none !important;
+  }
+}

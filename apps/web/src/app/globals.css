@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 15, 23, 42;
+  --background-rgb: 248, 250, 252;
+
+  /* Official CEE Medical Prep Brand Palette */
+  --brand-sky: #b8dff4;
+  --brand-aqua: #a9e6dd;
+  --brand-mint: #d5f3e8;
+  --brand-cloud: #f5fbfa;
+  --brand-teal: #244a50;
+
+  /* Dashboard Theme Tokens — Light Mode (Official Palette) */
+  --dashboard-bg: #f5fbfa;
+  --dashboard-card: #ffffff;
+  --dashboard-card-hover: #f8fdfb;
+  --dashboard-surface: #d5f3e8;
+  --dashboard-surface-subtle: #eaf8f4;
+  --dashboard-text-primary: #244a50;
+  --dashboard-text-secondary: #3d6870;
+  --dashboard-text-muted: #5e848c;
+  --dashboard-border: #d5f3e8;
+  --dashboard-border-subtle: rgba(169, 230, 221, 0.4);
+  --dashboard-accent-primary: #b8dff4;
+  --dashboard-accent-secondary: #a9e6dd;
+  --dashboard-accent-interactive: #5b52d6;
+  --dashboard-shadow: 0 4px 20px rgba(36, 74, 80, 0.05);
+}
+
+.dark,
+:root[class~="dark"] {
+  --foreground-rgb: 245, 251, 250;
+  --background-rgb: 10, 17, 40;
+
+  /* Dashboard Theme Tokens — Dark Mode (Navy/Muted Violet Character) */
+  --dashboard-bg: #0a1128;
+  --dashboard-card: #101a3c;
+  --dashboard-card-hover: #15224d;
+  --dashboard-surface: #131d45;
+  --dashboard-surface-subtle: #192757;
+  --dashboard-text-primary: #f5fbfa;
+  --dashboard-text-secondary: #a9b8d0;
+  --dashboard-text-muted: #7e8daa;
+  --dashboard-border: rgba(184, 223, 244, 0.12);
+  --dashboard-border-subtle: rgba(255, 255, 255, 0.08);
+  --dashboard-accent-primary: #b8dff4;
+  --dashboard-accent-secondary: #a9e6dd;
+  --dashboard-accent-interactive: #7367f0;
+  --dashboard-shadow: 0 12px 32px rgba(5, 8, 23, 0.6);
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+.dashboard-theme-dark {
+  color: #e6f2f3;
+  background-color: #0b1d23 !important;
+}
+
+.dashboard-theme-dark .dashboard-header {
+  border-color: #23434b !important;
+  background-color: rgb(13 37 44 / 94%) !important;
+}
+
+.dashboard-theme-dark .dashboard-surface {
+  border-color: #254a53 !important;
+  background-color: #123039 !important;
+  color: #dcebed;
+}
+
+.dashboard-theme-dark .dashboard-surface h1,
+.dashboard-theme-dark .dashboard-surface h2,
+.dashboard-theme-dark .dashboard-surface h3 {
+  color: #e8f4f4 !important;
+}
+
+.dashboard-theme-dark .dashboard-surface p {
+  color: #a4bdc1;
+}
+
+.dashboard-theme-dark .dashboard-surface input,
+.dashboard-theme-dark .dashboard-surface select {
+  border-color: #31555d;
+  background-color: #102932;
+  color: #e4f1f2;
+}
+
+.dashboard-theme-dark .dashboard-surface button:hover {
+  background-color: #1a424a;
+}
+
+/* Ensure accessible focus outlines */
+*:focus-visible {
+  outline: 2px solid #0284c7;
+  outline-offset: 2px;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
